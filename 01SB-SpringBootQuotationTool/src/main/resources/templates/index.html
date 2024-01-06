@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Quotation Tool</title>
+</head>
+<body>
+    <h2>Quotations</h2>
+    <ul>
+        <li th:each="quotation : ${quotations}">
+            <span th:text="${quotation.author} + ': ' + ${quotation.text}"></span>
+        </li>
+    </ul>
+
+    <h2>Add New Quotation</h2>
+    <form th:action="@{/add}" th:object="${newQuotation}" method="post">
+        <label>Author:</label>
+        <input type="text" th:field="*{author}" required>
+        <br>
+        <label>Text:</label>
+        <input type="text" th:field="*{text}" required>
+        <br>
+        <button type="submit">Add Quotation</button>
+    </form>
+</body>
+</html>
