@@ -1,5 +1,5 @@
 package com.nisha.springboot;
-
+//appended to test the update from local terminal (laptop notepadd++)
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
